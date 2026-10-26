@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugarwhisk | A Little Box of Happiness......Created By Shivani </title>
+    <meta name="description" content="Shop beautiful cakes, chocolates, cookies, macarons and thoughtful gift hampers at Sugarwhisk.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="announcement">
+        A little sweetness goes a long way ♡ Free delivery on orders above ₹999
+    </div>
+
+    <header class="header">
+        <a href="#home" class="logo">sugar<span>whisk</span><small>BAKED WITH LOVE</small></a>
+
+        <button class="menu-button" id="menuButton" aria-label="Open navigation">☰</button>
+
+        <nav class="navigation" id="navigation">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop treats</a>
+            <a href="#gifts">Gift boxes</a>
+            <a href="#about">Our story</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" id="openCart">♡ My bag <span id="cartCount">0</span></button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">MADE FOR YOUR SWEETEST MOMENTS</span>
+                <h1>A little sugar.<br>A lot of <span>happiness.</span></h1>
+                <p>Pretty cakes, dreamy chocolates and thoughtful little gifts. Handpicked for your favourite people — including you.</p>
+                <div class="hero-buttons">
+                    <a href="#shop" class="button button-pink">Explore the treats ↗</a>
+                    <a href="#gifts" class="text-link">Make a gift box ♡</a>
+                </div>
+                <div class="hero-note">
+                    <span class="note-heart">♡</span>
+                    <span><strong>Made with extra love</strong><br>Sweet moments, beautifully packed.</span>
+                </div>
+            </div>
+
+            <div class="hero-picture">
+                <img src="images/Cakee.jpg"
+                     alt="Beautiful celebration cake" onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+                <div class="floating-note note-top">♡ sweet things inside</div>
+                <div class="floating-note note-bottom">A treat for your heart ✿</div>
+                <span class="hero-sparkle sparkle-one">✳</span>
+                <span class="hero-sparkle sparkle-two">✦</span>
+            </div>
+        </section>
+
+        <section class="category-section section-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">WHAT ARE YOU CRAVING?</span>
+                    <h2>A little something for <em>everyone.</em></h2>
+                </div>
+                <p>Choose your kind of happy.</p>
+            </div>
+
+            <div class="category-grid">
+                <button class="category-card" data-category="Cakes">
+                    <span class="category-emoji">🍰</span>
+                    <strong>Cakes</strong><small>For the big moments</small>
+                </button>
+                <button class="category-card" data-category="Chocolates">
+                    <span class="category-emoji">🍫</span>
+                    <strong>Chocolates</strong><small>A little cocoa magic</small>
+                </button>
+                <button class="category-card" data-category="Cookies">
+                    <span class="category-emoji">🍪</span>
+                    <strong>Cookies</strong><small>Crunchy little joys</small>
+                </button>
+                <button class="category-card" data-category="Macarons">
+                    <span class="category-emoji">🍬</span>
+                    <strong>Macarons</strong><small>Pretty pastel bites</small>
+                </button>
+                <button class="category-card" data-category="Candies">
+                    <span class="category-emoji">🍭</span>
+                    <strong>Candies</strong><small>For your inner child</small>
+                </button>
+                <button class="category-card" data-category="Gift Boxes">
+                    <span class="category-emoji">🎀</span>
+                    <strong>Gift boxes</strong><small>Love, all wrapped up</small>
+                </button>
+            </div>
+        </section>
+
+        <section class="shop-section section-wrap" id="shop">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">THE SUGARWHISK COLLECTION</span>
+                    <h2>Sweet things, <em>coming right up.</em></h2>
+                    <p class="section-description">Your next favourite treat is waiting here.</p>
+                </div>
+                <span class="handwritten">picked with love ♡</span>
+            </div>
+
+            <div class="shop-tools">
+                <input type="search" id="searchInput" placeholder="Search cakes, cookies, chocolates..." aria-label="Search products">
+
+                <select id="categoryFilter" aria-label="Filter by category">
+                    <option value="All">All treats</option>
+                    <option value="Cakes">Cakes</option>
+                    <option value="Chocolates">Chocolates</option>
+                    <option value="Cookies">Cookies</option>
+                    <option value="Macarons">Macarons</option>
+                    <option value="Candies">Candies</option>
+                    <option value="Baklava">Baklava</option>
+                    <option value="Indian Sweets">Indian sweets</option>
+                    <option value="Flowers">Flowers</option>
+                    <option value="Gift Boxes">Gift boxes</option>
+                </select>
+
+                <select id="priceFilter" aria-label="Filter by price">
+                    <option value="all">Any price</option>
+                    <option value="under300">Under ₹300</option>
+                    <option value="300to600">₹300 – ₹600</option>
+                    <option value="600to1000">₹600 – ₹1,000</option>
+                    <option value="above1000">Above ₹1,000</option>
+                </select>
+
+                <select id="dietFilter" aria-label="Filter by dietary preference">
+                    <option value="all">All dietary options</option>
+                    <option value="Eggless">Eggless</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Sugar-free">Sugar-free</option>
+                </select>
+
+                <select id="sortFilter" aria-label="Sort products">
+                    <option value="featured">Featured</option>
+                    <option value="low">Price: low to high</option>
+                    <option value="high">Price: high to low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+
+            <div class="filter-tags">
+                <button class="filter-tag active" data-quick-filter="All">All treats</button>
+                <button class="filter-tag" data-quick-filter="Bestseller">Bestsellers ♡</button>
+                <button class="filter-tag" data-quick-filter="New">Just arrived ✨</button>
+                <button class="filter-tag" data-quick-filter="Eggless">Eggless options</button>
+            </div>
+
+            <p class="result-count" id="resultCount">Our sweetest picks for you</p>
+            <div class="product-grid" id="productGrid"></div>
+            <div class="empty-message" id="emptyMessage" hidden>
+                <span>🍓</span>
+                <h3>No treats found just yet!</h3>
+                <p>Try another search or clear your filters.</p>
+                <button class="button button-pink" id="clearFilters">Show all treats</button>
+            </div>
+        </section>
+
+        <section class="gift-section" id="gifts">
+            <div class="gift-intro">
+                <span class="eyebrow">YOUR GIFT, YOUR RULES</span>
+                <h2>Make someone say<br><em>“you know me so well.”</em></h2>
+                <p>Pick the goodies, choose the ribbon, add a tiny note. We'll make your gift feel like a hug in a box.</p>
+                <div class="gift-perks">
+                    <span>♡ Your choice of treats</span>
+                    <span>♡ Personal message</span>
+                    <span>♡ Pretty gift wrapping</span>
+                </div>
+                <div class="gift-photo">
+                    <img src="images/party box.jpg"
+                         alt="Thoughtfully wrapped gift" loading="lazy"
+                         onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+                </div>
+            </div>
+
+            <div class="gift-builder">
+                <span class="eyebrow">THE LITTLE GIFT STUDIO</span>
+                <h3>Build your happy box 🎀</h3>
+
+                <label for="boxSize">1. Pick your box size</label>
+                <div class="size-options">
+                    <label class="size-card">
+                        <input type="radio" name="boxSize" value="Small" checked>
+                        <span class="size-emoji">🎁</span><strong>Little</strong>
+                        <small>4 treats</small><b>₹399</b>
+                    </label>
+                    <label class="size-card">
+                        <input type="radio" name="boxSize" value="Medium">
+                        <span class="size-emoji">🎀</span><strong>Lovely</strong>
+                        <small>6 treats</small><b>₹599</b>
+                    </label>
+                    <label class="size-card">
+                        <input type="radio" name="boxSize" value="Premium">
+                        <span class="size-emoji">💝</span><strong>Grand</strong>
+                        <small>12 treats</small><b>₹999</b>
+                    </label>
+                </div>
+
+                <label>2. Pick your treats <span class="label-light">(choose up to your box limit)</span></label>
+                <div class="treat-choices" id="treatChoices"></div>
+                <p class="selection-count" id="selectionCount">0 treats selected</p>
+
+                <label for="occasion">3. What's the occasion?</label>
+                <select id="occasion">
+                    <option>Just Because</option>
+                    <option>Birthday</option>
+                    <option>Anniversary</option>
+                    <option>Wedding</option>
+                    <option>Valentine's Day</option>
+                    <option>Diwali</option>
+                    <option>Rakhi</option>
+                    <option>Christmas</option>
+                    <option>Thank You</option>
+                    <option>Corporate Gift</option>
+                </select>
+
+                <label for="ribbonColor">4. Choose your ribbon</label>
+                <select id="ribbonColor">
+                    <option value="Blush pink">Blush pink 🎀</option>
+                    <option value="Cream">Cream 🤍</option>
+                    <option value="Lavender">Lavender 💜</option>
+                    <option value="Sage green">Sage green 💚</option>
+                    <option value="Burgundy">Burgundy ❤️</option>
+                    <option value="Baby blue">Baby blue 🩵</option>
+                    <option value="Golden">Golden ✨</option>
+                </select>
+
+                <label for="giftMessage">5. Add a little message</label>
+                <textarea id="giftMessage" rows="3" maxlength="160" placeholder="For my favourite person, with all my love..."></textarea>
+
+                <div class="gift-total">
+                    <div><small>Your custom gift</small><strong id="giftTotal">₹399</strong></div>
+                    <span id="giftSummary">Little box · 4 treats</span>
+                </div>
+
+                <button class="button button-pink full-button" id="addGift">Add my gift box to bag ♡</button>
+                <p class="tiny-note">Your gift box is a demo preview. No payment is taken.</p>
+            </div>
+        </section>
+
+        <section class="occasion-section section-wrap">
+            <div class="section-heading centered-heading">
+                <span class="eyebrow">LITTLE MOMENTS, BIG FEELINGS</span>
+                <h2>There's always a reason <em>to celebrate.</em></h2>
+                <p>And if there isn't one, let's make one.</p>
+            </div>
+
+            <div class="occasion-grid">
+                <button class="occasion-card birthday" data-occasion="Birthday"><span>🎂</span><strong>Birthday wishes</strong><small>Make their day extra sweet</small></button>
+                <button class="occasion-card love" data-occasion="Anniversary"><span>💌</span><strong>Love & anniversaries</strong><small>Little things, big love</small></button>
+                <button class="occasion-card festive" data-occasion="Diwali"><span>🪔</span><strong>Festive happiness</strong><small>Share a box of joy</small></button>
+                <button class="occasion-card just-because" data-occasion="Just Because"><span>🌷</span><strong>Just because</strong><small>No reason needed</small></button>
+            </div>
+        </section>
+
+        <section class="story-section" id="about">
+            <div class="story-picture">
+                <img src="images/image.jpg"
+                     alt="Freshly baked cupcakes" loading="lazy"
+                     onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');">
+                <span class="story-sticker">made with ♡</span>
+            </div>
+            <div class="story-content">
+                <span class="eyebrow">A NOTE FROM OUR LITTLE WORLD</span>
+                <h2>Life is better<br>with a little <em>sprinkle.</em></h2>
+                <p>Sugarwhisk started with a simple thought: the smallest surprises can mean the most. A cupcake after a long day, chocolates for your best friend, or a gift box that says everything you can't put into words.</p>
+                <p>We believe every treat should feel special, every gift should feel personal, and every visit should leave you smiling.</p>
+                <a href="#shop" class="button button-outline">Find your happy treat ♡</a>
+            </div>
+        </section>
+
+        <section class="review-section section-wrap">
+            <span class="eyebrow">SWEET WORDS ONLY</span>
+            <h2>A little love from <em>our happy corner.</em></h2>
+            <div class="review-grid">
+                <article class="review-card"><div class="stars">★★★★★</div><p>“The packaging was SO pretty. I almost didn't want to open the box. Almost.”</p><strong>— A happy sweet tooth ♡</strong></article>
+                <article class="review-card"><div class="stars">★★★★★</div><p>“Made a custom hamper for my best friend and she absolutely loved every bit of it.”</p><strong>— A gift-giving girlie 🎀</strong></article>
+                <article class="review-card"><div class="stars">★★★★★</div><p>“The cutest little corner of the internet. The macarons look like tiny works of art.”</p><strong>— Your fellow dessert lover 🍓</strong></article>
+            </div>
+            <p class="demo-note">Sample testimonials for the website preview — replace these with real customer reviews when available.</p>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="newsletter-decoration">✿</div>
+            <span class="eyebrow">LET'S BE SWEET FRIENDS</span>
+            <h2>A sprinkle of sweetness<br>in your inbox.</h2>
+            <p>New treats, little surprises and special offers. No spam, just sprinkles.</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                <button type="submit" class="button button-dark">Count me in ♡</button>
+            </form>
+            <p id="newsletterMessage" class="form-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="#home" class="logo">sugar<span>whisk</span><small>CREATED WITH LOVE BY SHIVANI</small></a>
+                <p>Little treats. Big feelings.<br>Made to make your day sweeter. ♡</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a>
+                    <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer">Pinterest ↗</a>
+                </div>
+            </div>
+            <div class="footer-column"><strong>Explore</strong><a href="#shop">Shop all treats</a><a href="#gifts">Build a gift box</a><a href="#about">Our little story</a></div>
+            <div class="footer-column"><strong>Need a hand?</strong><a href="mailto:hello@sugarwhisk.example">hello@sugarwhisk.example</a><a href="#contact">Delivery information</a><a href="#contact">FAQs</a></div>
+            <div class="footer-column"><strong>Our little promise</strong><p>Thoughtful gifting, pretty packaging, and a whole lot of sweetness.</p><span>♡ Packed with love</span></div>
+        </div>
+        <div class="footer-bottom"><span>© <span id="year"></span> Sugarwhisk. All things sweet.</span><span>Made with a little extra sugar ♡</span></div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-panel" id="cartPanel" aria-label="Shopping bag">
+        <div class="cart-header">
+            <div><span class="eyebrow">YOUR LITTLE BAG</span><h2>Sweet picks ♡</h2></div>
+            <button class="close-cart" id="closeCart" aria-label="Close bag">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-empty" id="cartEmpty"><span>🧁</span><h3>Your bag is looking lonely!</h3><p>Add something sweet to make it happy.</p></div>
+        <div class="cart-bottom">
+            <div class="coupon-row"><input type="text" id="couponInput" placeholder="Coupon code"><button id="applyCoupon">Apply</button></div>
+            <p class="coupon-hint">Try <strong>SWEET10</strong> for 10% off your demo order.</p>
+            <div class="cart-subtotal"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+            <div class="cart-discount" id="cartDiscountRow" hidden><span>Discount</span><strong id="cartDiscount">−₹0</strong></div>
+            <div class="cart-subtotal"><span>Delivery</span><strong id="deliveryCost">₹0</strong></div>
+            <div class="cart-total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+            <button class="button button-pink full-button" id="checkoutButton">Continue to checkout ♡</button>
+            <p class="tiny-note">Demo store only. No real payment will be taken.</p>
+        </div>
+    </aside>
+
+    <div class="checkout-overlay" id="checkoutOverlay">
+        <div class="checkout-box">
+            <button class="close-cart checkout-close" id="closeCheckout" aria-label="Close checkout">×</button>
+            <span class="checkout-icon">🎀</span>
+            <span class="eyebrow">ONE LAST LITTLE STEP</span>
+            <h2>Let's get your treats ready!</h2>
+            <p>This is a front-end demo. Enter sample details to preview the order confirmation.</p>
+            <form id="checkoutForm">
+                <label for="customerName">Your name</label>
+                <input id="customerName" required placeholder="What should we call you?">
+                <label for="customerEmail">Email address</label>
+                <input id="customerEmail" type="email" required placeholder="you@example.com">
+                <label for="customerAddress">Delivery address</label>
+                <textarea id="customerAddress" required rows="3" placeholder="Where should your sweetness arrive?"></textarea>
+                <button class="button button-pink full-button" type="submit">Place demo order ♡</button>
+            </form>
+            <div id="orderSuccess" class="order-success" hidden></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
